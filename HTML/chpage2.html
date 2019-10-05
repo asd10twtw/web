@@ -1,0 +1,325 @@
+<!DOCTYPE html> 
+<html>
+
+<head>
+	<title id="til"></title>
+	<link rel="icon" href="#" id="titleicon" >
+
+    <!-- Owl Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"  media="screen,projection"/>
+
+    <!-- javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"></script>
+
+</head> 
+
+<body > 
+	 <div id="demoo" style="width:500px;margin:0px auto;display:block;" ></div>
+	 
+	 <div id="iner" style="font-family: 標楷體;width: 70%;color:#FFFFC9;"></div>
+
+	 <div id="personal" style="color:#FFFFC9;width:70%;margin:0px auto;margin-bottom: 20px;display:block;font-size: 22px;font-family: 標楷體;" ></div>
+
+<div style="margin:0px auto;display:block;width: 80%;font-size: 30px;margin-bottom: 10px;font-weight:bold; color:#FFFF4F;">居住地</div>
+<iframe id="map" src="#" width="80%" height="500" style="margin:0px auto;display:block;"></iframe>
+
+
+<div style="font-size: 30px;margin:0px auto;display:block;margin-top: 20px;margin-bottom: 10px;font-weight:bold; color:#FFFF4F;width: 80%;">好歌推薦</div>
+  <div id="youtube-playlist">
+	</div>
+
+<div style="font-size: 30px;margin-left: 130px;margin-bottom: 10px;font-weight:bold; color:#FFFF4F;">相關文章</div>
+ <div id="pixnet-stuff">
+	</div>
+
+
+	<div class="wrapper" id="officelink"></div>
+
+
+
+	 <style>
+	 .wrapper {
+	 	margin:0px auto;
+	 	margin-bottom: 300px;
+	 	width: 40%;
+  		display: grid;
+  		grid-template-columns: 1fr 1fr 1fr;
+	}
+	* {box-sizing: border-box;}
+	.wrapper {
+   	 	border-radius: 5px;}
+	.wrapper > div {
+    	border-radius: 5px;
+   		padding: 1em;
+	}
+	.nested {
+    	border: 2px solid #ffec99;
+    	border-radius: 5px;
+    	background-color: #fff9db;
+    	padding: 1em;
+	}
+
+	 	#iner
+	 	{
+	 		font-size: 25px;
+	 		margin:0px auto;
+	 		//display:flex;
+	 		margin-bottom:80px;
+	 		//border:1px solid #FF0000;	//solid #FF0000
+
+	 	}
+	 	#pixnet-stuff
+	 	{
+	 		//margin-left:130px;
+	 		margin-bottom: 100px;
+	 		margin:0px auto;
+	 		list-style: none;
+    		//border: 3px ; 
+    		//border-color: #7F00DB;
+    		//border-style:solid;   
+    		width: 80%;
+    		padding: 0;    
+    		overflow:auto; /* 超過範圍 */
+    		white-space: nowrap; /* 不斷行 */
+	 	}
+		#pixnet-stuff ul  {
+    		display: inline-block;    /* 水平內顯示為區塊 */
+    		margin-left:10px;
+    		margin-top:10px;
+    		border: 2px solid #B8B8FF;
+    		padding:0 20px;
+    		padding-top:20px;
+    		color:#0033FF;
+    		text-decoration:none;
+    		font-size:12px;
+    		line-height:21px;
+		}
+		#youtube-playlist
+	 	{
+			text-overflow: ellipsis;
+	 		margin-left:130px;
+	 		margin-bottom: 20px;
+	 		list-style: none;
+    		width: 80%;
+    		padding: 0;    
+    		overflow:auto; /* 超過範圍 */
+    		white-space: nowrap; /* 不斷行 */
+	 	}
+		#youtube-playlist ul  {
+    		display: inline-block;    /* 水平內顯示為區塊 */
+    		margin-left:10px;
+    		margin-top:10px;
+    		border: 2px solid #B8B8FF;
+    		padding:0 20px;
+    		padding-top:20px;
+    		color:#0033FF;
+    		text-decoration:none;
+    		font-size:12px;
+    		line-height:21px;
+		}
+		.ellipsis {
+			width: 300px;
+			overflow:hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+		.breakword {
+			width: 300px;
+			white-space: pre-wrap;
+			height: 20px;
+		}
+
+	 </style>
+
+	 <script type='text/javascript'>
+	 	function funn(x)
+	{
+		var img1 = new Array();
+		img1[0] = "url(https://i.imgur.com/nuycOGa.png)";
+		img1[1] = "url(https://i.imgur.com/Ke79sGU.png)";
+		img1[2] = "url(http://www.kuoo8.com/wall_up/hsf2288/201004/2010040711363868050.jpg)";	
+		img1[3] = "url(https://static.juksy.com/files/articles/70289/59acd9e9db793.jpg)";
+		img1[4] = "url(https://i.imgur.com/1E5vhL1.jpg)";
+		document.body.style.backgroundImage=img1[x];
+		document.body.style.backgroundSize="cover";
+		document.body.style.backgroundAttachment= "fixed";
+		document.body.style.backgroundPosition=" center";
+		document.body.style.backgroundRepeat=" no-repeat";
+
+	}
+
+	 </script>
+
+	<!-- 利用Tabletop.JS讀取Google Sheet https://github.com/jsoma/tabletop -->
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+	<script type='text/javascript'>
+
+		
+	 function GetUrlVar(VarName) 
+		{
+		  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+		  var regexS = "[\\?&]" + VarName + "=([^&#]*)";
+		  var regex = new RegExp(regexS);
+		  var results = regex.exec(window.location.href);
+		  if (results == null)
+		   	 return "";
+		  else
+			 return results[1];
+		}
+	 var publicSpreadsheetUrl = 'https://docs.google.com/spreadsheets/d/1_A5xOL1HDh8cph2b5UozGj0YRaUpSMkciA_J4b520ko/pubhtml';
+	
+
+	  function init() {
+		Tabletop.init( { key: publicSpreadsheetUrl,
+						 callback: showInfo,
+						 simpleSheet: true 
+						
+             		} )
+	  }
+
+	  function showInfo(data, tabletop) {
+		// alert('Successfully processed!')
+		console.log(data);
+		
+	var x = decodeURIComponent(GetUrlVar('pid'));
+	
+	funn(x);	
+
+	var webname="";
+	webname=data[x].namee;
+	document.getElementById("til").innerHTML = webname;
+
+	var webicon="";
+	webicon=data[x].titleicon;
+	document.getElementById("titleicon").setAttribute("href",webicon);
+
+	var img = new Array();
+	img[0] = data[x].pic1;		
+	img[1] = data[x].pic2;
+	img[2] = data[x].pic3;		
+	img[3] = data[x].pic4;
+	img[4] = data[x].pic5;		
+	img[5] = data[x].pic6;
+	img[6] = data[x].pic7;		
+	img[7] = data[x].pic8;
+	img[8] = data[x].pic9;
+	img[9] = data[x].pic10;
+	img[10] = data[x].pic11;
+
+	var str = "";
+	str='<div class="owl-carousel owl-theme">';
+	for (i=0 ; i<11 ; i++)
+	{
+		str += '<div class="item">';
+		str += '<image src="' + img[i] + '">';
+		str += '</div>';
+	}
+	str += '</div>';
+
+	var abc="";
+	abc+='<div><h style="font-weight:bold;">基本資料</h><p>'+ data[x].基本資料 +'</p></div>';
+
+	var file="";
+	file += data[x].團員介紹;
+	
+	var googlemap="https://www.google.com.tw/maps?f=q&hl=zh-TW&q="+ data[x].map +"&z=16&t=q&output=embed";
+
+	document.getElementById("map").setAttribute("src", googlemap);
+
+	document.getElementById("demoo").innerHTML = str;
+	document.getElementById("iner").innerHTML = abc;
+	document.getElementById("personal").innerHTML = file;
+
+	//youtube
+	var youxmlhttp = new XMLHttpRequest();
+	var youurl = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet,contentDetails&playlistId="+data[x].youtubelist+"&key=AIzaSyD4s5YbkvnSxJxuMqm1d0TBG6oGikiJf2M&maxResults=50";
+
+	youxmlhttp.onreadystatechange = function() {
+		if (youxmlhttp.readyState == 4 && youxmlhttp.status == 200) {
+			var myArr = JSON.parse(youxmlhttp.responseText);
+			youmyFunction(myArr);
+		}
+	}
+	youxmlhttp.open("GET", youurl, true);
+	youxmlhttp.send();
+
+	function youmyFunction(arr) {
+		var dataa = arr.items;
+		var outt = "";
+		var i;
+		for (i = 0; i < dataa.length; i++) {
+			if ( dataa[i].thumb != "" ) outt += '<ul><img src="' + dataa[i].snippet.thumbnails.medium.url + '" />';
+			if ( dataa[i].title != "" ) outt += '<p class="ellipsis"><a style="color:#C9FFFF;" href="https://youtu.be/' + dataa[i].snippet.resourceId.videoId + '" target="_blank" title="'+ dataa[i].snippet.title +'">' + dataa[i].snippet.title + '</a></p>';
+			outt += '<p> </p></ul>';
+		}
+		document.getElementById("youtube-playlist").innerHTML = outt;
+	}
+
+
+	//好文推薦
+	var url = data[x].痞客邦;
+
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var myArr = JSON.parse(xmlhttp.responseText);
+			myFunction(myArr);
+		}
+	}
+	xmlhttp.open("GET", url, true);
+	xmlhttp.send();
+
+	function myFunction(arr) {
+		var data = arr.articles;
+		var out = "";
+		var i;
+		for (i = 0; i < data.length; i++) {
+			if ( data[i].thumb != "" ) out += '<ul><img src="' + data[i].thumb + '" />';
+			if ( data[i].title != "" ) out += '<p class="ellipsis"><a style="color:#C9FFFF;" href="' + data[i].link + '" target="_blank" title="' +  data[i].title + '">' + data[i].title + '</a></p>';
+			out += '<p> </p>';
+			if ( data[i].tags.length != 0 )
+			   {
+				out += '<p style="color:#FFC14F;" class="breakword">Tags: ';
+				for (j = 0; j < data[i].tags.length; j++) {
+					out += data[i].tags[j].tag + ', ';
+				}
+				out += '</p>';
+			   }
+			out += '<br /><br /><br /></ul>';
+		}
+		document.getElementById("pixnet-stuff").innerHTML = out;
+	}
+
+	//FB youtube IG 官方
+	var relati = "";
+	relati += '<div><a target="_blank" href="'+ data[x].youtubelink +'"><img src="https://cdn3.iconfinder.com/data/icons/erlen-s-social-media-icon-set/128/icon_youtube_128.png" alt="測試圖片" border="0"></a></div><div><a href="' + data[x].fblink + '" target="_blank"><img src="https://cdn3.iconfinder.com/data/icons/erlen-s-social-media-icon-set/128/icon_facebook_128.png" alt="測試圖片" border="0"></a></div><div><a target="_blank" href="' + data[x].iglink +'"><img src="https://cdn3.iconfinder.com/data/icons/erlen-s-social-media-icon-set/128/icon_instagram_128.png" alt="測試圖片" border="0"></a></div>';
+	document.getElementById("officelink").innerHTML = relati;
+
+	//autoplay
+	var owl = $('.owl-carousel');		//找到名叫.owl-carousel的class
+             			owl.owlCarousel({					
+                		items: 1,
+                		loop: true,
+                		margin: 10,
+               		 	autoplay: true,
+                		autoplayTimeout: 1000,
+                		autoplayHoverPause: true,
+                		center:true
+              		});
+
+
+
+	}
+	
+
+	 window.addEventListener('DOMContentLoaded', init);
+	 //window.addEventListener('DOMContentLoaded', fun);
+	</script>
+
+</body>
+
+</html>
